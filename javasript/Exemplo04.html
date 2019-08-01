@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="Exemplo04.js"></script>
+        <link rel="stylesheet" href="Exemplo04.css">
+
+        <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+        <script src="lib/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="lib/js/popper.min.js"></script>
+        <script src="lib/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input class="form-control" autofocus="true" type="text" id="nome" onkeypress="salvar(event)">
+                <button class="btn btn-outline-success" onclick="adicionar()">Adicionar</button>
+            </div>
+        </div>
+
+        <div>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="registros"></tbody>
+            </table>
+
+            <span class="text-weight-bold">Quantidade: 
+            <span id="quantidade"></span></span>
+        </div>
+    </div>
+</body>
+</html>
