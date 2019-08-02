@@ -5,7 +5,7 @@ var indiceParaEditar = -1;
 function adicionar() {
     var campoNome = document.getElementById("nome");
     var nome = campoNome.value;
-    valido = validar(nome, campoNome);
+    valido = validarCampo(nome, campoNome);
     if (valido == false) {
         return;
     }
@@ -106,7 +106,7 @@ function limparCampo(campo) {
     campo.focus();
 }
 
-function validar(nome, campo) {
+function validarCampo(nome, campo) {
     texto = "";
 
     if (nome.trim().length == 0) {
@@ -140,4 +140,10 @@ function validar(nome, campo) {
     }
 
     return true;
+}
+
+function validar(){
+    var campo = document.getElementById('nome');
+    var nome = campo.value;
+    return validarCampo(nome,campo);
 }
